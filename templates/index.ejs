@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add link</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="title">
+    <h1>Add Link</h1>
+    </div>
+    <div class="container">
+        <div class="form-container">
+        <form action="/" method="POST">
+        <input type="text" name="title" placeholder="Title" class="inp-title" autocomplete="off" value="<%=body.title%>" required>
+        <br>
+        <input type="text" name="description" placeholder="Description (optional)"  class="inp-desc" autocomplete="off" value="<%=body.description%>">
+        <br>
+        <input type="url" name="url" placeholder="URL"  class="inp-url" autocomplete="off" value="<%=body.url%>" required>
+        <br>
+        <button class="btn">Add</button>
+    </form>
+    </div>
+    </div>
+    
+
+    <% if(error) {%>
+       <h3><%=error.message%></h3>
+    <%}%>  
+
+</body>
+</html>

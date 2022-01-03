@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/all.css">
+    <title>Edit</title>
+    <style>
+        body {
+            background: #222;
+        }
+
+        .title {
+            text-align:center;
+            color:chartreuse;
+            font-family: sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .container input {
+            margin:10px 0;
+            border:1px solid chartreuse;
+            background: none;
+            height: 35px;
+            width:100%;
+            border-radius: 10px;
+            padding:0 5px;
+            color:aliceblue;
+        }
+
+        .btn {
+            height:50px;
+    width:100%;
+    color:aliceblue;
+    background: #222;
+    border:1px solid #444;
+    border-radius: 25px;
+    cursor:pointer;
+        }
+
+        .btn:hover {
+    color:chartreuse;
+    transform: scale(1.1);
+}
+    </style>
+</head>
+<body>
+    <div class="title">
+        <h1>Edit Link</h1>
+    </div>
+    
+    <div class="container">
+    <form action="/edit/<%=body.id%>" method="POST">
+        <input type="text" name="title" placeholder="Title" class="field" autocomplete="off" value="<%=body.title%>" required>
+        <input type="text" name="description" placeholder="Description" class="field" autocomplete="off" value="<%=body.description%>">
+        <input type="text" name="url" placeholder="URL" class="field" autocomplete="off" value="<%=body.url%>" required>
+        <button class="btn">Edit</button>
+    </form>
+</div>
+    <% if(error) {%>
+       <h3><%=error.message%></h3>
+    <%}%>  
+
+</body>
+</html>
