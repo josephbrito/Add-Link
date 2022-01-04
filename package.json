@@ -4,11 +4,9 @@
   "description": "save your links",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run": "node app.js"
   },
-  "keywords": [
-  "run": "node app.js"
-  ],
+  "keywords": [],
   "author": {
     "name": "José de Brito",
     "email", "jokesta02@gmail.com",
